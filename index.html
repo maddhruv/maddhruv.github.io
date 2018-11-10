@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>Dhruv Jain - @maddhruv</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.41.0/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.41.0/lib/codemirror.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/javascript/javascript.js"></script>
+    <link rel='stylesheet' href='dracula.css' />
+    <style>
+      body {
+        background: #1E2427;
+      }
+      ::-webkit-scrollbar {
+        width: 0.5em;
+      }
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,0.1);
+        outline: 1px solid rgba(0,0,0,0.2);
+        border-radius: 5px;
+      }
+      .CodeMirror {
+        height: auto;
+        width: auto;
+      }
+      #data {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='data'>// Version: 22
+import { Frontend, Backend } from '@skills/app'
+import { C, C++, JavaScript, Nodejs, Python, MySQL, MongoDB } from '@skills/programming'
+import { React, React-Native, MobX, Express, Next.js, Webpack, Chai, jQuery, SASS, Electron, Babel } from '@skills/frameworks'
+import { AWS, Mocha, Docker, Git, Firebase, PWA, Jekyll, Illustrator } from '@skills/others'
+import { work, build, fire } from 'actions'
+import { JECRC } from 'education'
+import { Unfactory, Pratikriya, Node.js, Bizsuggest, IndianMiles, Neostack, TCS } from 'experience'
+
+export default class Me {
+  constructor () {
+    this._name = 'Dhruv Jain'
+    this._dob = '21121997'
+    this.education = JECRC
+  }
+
+  get contact () {
+    return {
+      email: 'dhruvjainpenny@gmail.com',
+      github: '@maddhruv',
+      twitter: '@maddhruv',
+      linkedin: '@midhruvjaink'
+    }
+  }
+
+  function oss () {
+    return new Promise((resolve, reject) => {
+      let cotributions = {
+        ...contributions,
+        Node.js,
+        npm/tink,
+        akiran/react-slick,
+        bnb/good-first-issue,
+      }
+    })
+  }
+
+  async function experience () {
+    await work(Unfactory, 'Web Developer Intern', 'Dec 2016', 'Apr 2017')
+    await work(Pratikriya, 'Full Stack Developer Intern', 'Nov 2017', 'Mar 2018')
+    await work(Node.js, ['i18n', 'website-redesign'], 'Jan 2018')
+    await work(Bizsuggest, 'Node.js Developer', 'May 2018', 'July 2018')
+    await work(IndianMiles, 'Full Stack Freelance', 'Aug 2018', 'Sept 2018')
+    try {
+      await work(Neostack, 'Full Stack Developer Intern', 'Dec 2018', 'Apr 2019')
+      await work(TCS, 'Associate Systems Engineer', 'Apr 2019')
+    } catch (fire) {
+      fire()
+    }
+  }
+
+  set skills() {
+    this._me.register([C, C++, JavaScript, Nodejs, Python, MySQL, MongoDB])
+    this._me.register([React, React-Native, MobX, Express, Next.js, Webpack, Chai, jQuery, SASS, Electron, Babel])
+    this._me.register([AWS, Mocha, Docker, Git, Firebase, PWA, Jekyll, Illustrator])
+  }
+}
+    </div>
+    <script>
+      var data = document.getElementById('data')
+      var myCode = CodeMirror(document.body, {
+        value: data.innerHTML,
+        mode: "javascript",
+        lineNumbers: true,
+        readOnly: true,
+        theme: 'dracula'
+      })
+    </script>
+  </body>
+</html>
