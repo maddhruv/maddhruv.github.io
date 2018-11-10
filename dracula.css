@@ -22,7 +22,7 @@
 
 .cm-s-dracula .CodeMirror-linenumber {
   color: #6D8A88;
-  background: none;
+  background: #1a1f22 !important;
 }
 
 .cm-s-dracula .CodeMirror-selected {

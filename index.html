@@ -8,7 +8,9 @@
     <link rel='stylesheet' href='dracula.css' />
     <style>
       body {
-        background: #1E2427;
+        background: url('/BG.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
       }
       ::-webkit-scrollbar {
         width: 0.5em;
@@ -57,7 +59,10 @@ export default class Me {
   }
 
   function oss () {
-    return new Promise((resolve, reject) => {
+    return new Promise(function (resolve, reject) {
+      if (false) {
+        reject('never would reject')
+      }
       let cotributions = {
         ...contributions,
         Node.js,
@@ -65,6 +70,7 @@ export default class Me {
         akiran/react-slick,
         bnb/good-first-issue,
       }
+      resolve(contributions)
     })
   }
 
