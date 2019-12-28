@@ -40,13 +40,13 @@ import { React, React-Native, MobX, Express, Next.js, Webpack, Chai, jQuery, SAS
 import { AWS, Mocha, Docker, Git, Firebase, PWA, Jekyll, Illustrator } from '@skills/others'
 import { work, build, fire } from 'actions'
 import { JECRC } from 'education'
-import { Unfactory, Pratikriya, Node.js, Bizsuggest, IndianMiles, Neostack, TCS } from 'experience'
+import { Unfactory, Pratikriya, Node.js, Bizsuggest, IndianMiles, Neostack, ClearTax } from 'experience'
 
 export default class Me {
   constructor () {
     this._name = 'Dhruv Jain'
     this._dob = '21121997'
-    this.education = JECRC
+    this.employer = 'ClearTax'
   }
 
   get contact () {
@@ -80,12 +80,7 @@ export default class Me {
     await work(Node.js, ['i18n', 'website-redesign'], 'Jan 2018')
     await work(Bizsuggest, 'Node.js Developer', 'May 2018', 'July 2018')
     await work(IndianMiles, 'Full Stack Freelance', 'Aug 2018', 'Sept 2018')
-    try {
-      await work(Neostack, 'Full Stack Developer Intern', 'Dec 2018', 'Apr 2019')
-      await work(TCS, 'Associate Systems Engineer', 'Apr 2019')
-    } catch (fire) {
-      fire()
-    }
+    await work(ClearTax, 'Front-end Engineer', 'June 2019')
   }
 
   set skills() {
