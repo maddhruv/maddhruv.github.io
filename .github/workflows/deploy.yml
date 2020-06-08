@@ -30,7 +30,7 @@ jobs:
           git config --global user.email "dhruvjainpenny@gmail.com"
           git config --global user.name "Dhruv Jain"
 
-      - name: Built
+      - name: Build
         run: npm run build
 
       - name: Deploy
