@@ -25,17 +25,10 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Deploy
-        run: npm run deploy
-
       - name: Add
         run: |
           git config --global user.email "dhruvjainpenny@gmail.com"
           git config --global user.name "Dhruv Jain"
-          git status
-          git add .
-          git commit -m ":package: Update Downloads"
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy
+        run: npm run deploy
