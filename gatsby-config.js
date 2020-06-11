@@ -1,3 +1,5 @@
+const theme = require("./src/theme")
+
 module.exports = {
   siteMetadata: {
     title: `Dhruv Jain`,
@@ -11,6 +13,7 @@ module.exports = {
       twitter: `maddhruv`,
       github: `maddhruv`,
     },
+    theme,
   },
   plugins: [
     {
@@ -64,8 +67,8 @@ module.exports = {
         name: `Dhruv Jain`,
         short_name: `maddhruv`,
         start_url: `/`,
-        background_color: `#f5f5f5`,
-        theme_color: `#37c837`,
+        background_color: theme.colors.secondary,
+        theme_color: theme.colors.primary,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
