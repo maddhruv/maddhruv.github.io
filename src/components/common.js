@@ -8,8 +8,8 @@ export const Avatar = styled(Image)`
 
 export const Header = styled.h1`
   margin-bottom: 16px;
-  font-weight: 500;
-  color: #000000;
+  font-weight: 600;
+  color: ${props => props.theme.colors.primaryDark};
   margin-bottom: 16px;
 `
 export const Container = styled.div`

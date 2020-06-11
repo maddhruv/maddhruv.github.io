@@ -104,6 +104,7 @@ const Reset = createGlobalStyle`
   }
   body {
     background: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.font};
   }
   ol,
   ul {
@@ -127,6 +128,9 @@ const Reset = createGlobalStyle`
   a {
     text-decoration: none;
     color: ${props => props.theme.colors.primary};
+  }
+  footer {
+    opacity: 0.7;
   }
 `
 
