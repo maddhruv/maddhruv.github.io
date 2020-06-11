@@ -69,8 +69,40 @@ module.exports = {
         start_url: `/`,
         background_color: theme.colors.secondary,
         theme_color: theme.colors.primary,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        display: "standalone",
+        icon: "content/assets/avatar-32.png",
+        icons: [
+          {
+            src: "content/assets/avatar-16.png",
+            sizes: "16x16",
+            type: "image/png",
+          },
+          {
+            src: "content/assets/avatar-32.png",
+            sizes: "32x32",
+            type: "image/png",
+          },
+          {
+            src: "content/assets/avatar-64.png",
+            sizes: "64x64",
+            type: "image/png",
+          },
+          {
+            src: "content/assets/avatar-128.png",
+            sizes: "128x128",
+            type: "image/png",
+          },
+          {
+            src: "content/assets/avatar-256.png",
+            sizes: "256x256",
+            type: "image/png",
+          },
+          {
+            src: "content/assets/avatar-512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
