@@ -19,14 +19,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}//content/blog`,
         name: `blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}//content/assets`,
         name: `assets`,
       },
     },
@@ -73,32 +73,32 @@ module.exports = {
         icon: "content/assets/avatar-32.png",
         icons: [
           {
-            src: "content/assets/avatar-16.png",
+            src: "/assets/avatar-16.png",
             sizes: "16x16",
             type: "image/png",
           },
           {
-            src: "content/assets/avatar-32.png",
+            src: "/assets/avatar-32.png",
             sizes: "32x32",
             type: "image/png",
           },
           {
-            src: "content/assets/avatar-64.png",
+            src: "/assets/avatar-64.png",
             sizes: "64x64",
             type: "image/png",
           },
           {
-            src: "content/assets/avatar-128.png",
+            src: "/assets/avatar-128.png",
             sizes: "128x128",
             type: "image/png",
           },
           {
-            src: "content/assets/avatar-256.png",
+            src: "/assets/avatar-256.png",
             sizes: "256x256",
             type: "image/png",
           },
           {
-            src: "content/assets/avatar-512.png",
+            src: "/assets/avatar-512.png",
             sizes: "512x512",
             type: "image/png",
           },
