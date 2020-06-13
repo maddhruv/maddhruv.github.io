@@ -106,10 +106,6 @@ const Reset = createGlobalStyle`
     background: ${props => props.theme.colors.secondary};
     color: ${props => props.theme.colors.font};
   }
-  ol,
-  ul {
-    list-style: none;
-  }
   blockquote,
   q {
     quotes: none;
@@ -131,6 +127,12 @@ const Reset = createGlobalStyle`
   }
   footer {
     opacity: 0.7;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  nav > ul {
+    list-style: none;
   }
 `
 

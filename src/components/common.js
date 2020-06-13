@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import Image from "gatsby-image"
 
 export const Avatar = styled(Image)`

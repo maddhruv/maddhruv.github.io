@@ -19,6 +19,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <article>
         <header>
           <h1>{post.frontmatter.title}</h1>
+          <h5>{post.frontmatter.description}</h5>
           <p>{post.frontmatter.date}</p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
