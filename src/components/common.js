@@ -13,7 +13,6 @@ export const Header = styled.h1`
   margin-bottom: 16px;
 `
 export const Container = styled.div`
-  width: 100%;
   padding: 4vh 20vw 3vh 20vw;
   @media (max-width: 768px) {
     padding: 5vh 5vw 5vh 5vw;
