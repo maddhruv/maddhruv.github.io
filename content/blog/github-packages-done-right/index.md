@@ -2,6 +2,7 @@
 title: GitHub Packages Done Right
 date: "2020-06-27T12:41:03.284Z"
 description: "GitHub Packages with GitHub Actions"
+published: true
 ---
 
 ![GitHub Packages](./banner.png)

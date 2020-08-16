@@ -2,6 +2,7 @@
 title: Gallery
 date: "2020-07-11T07:47:04.284Z"
 description: Dhruv Jain Gallery and Wallpapers
+published: true
 ---
 
 <div style="display:flex">

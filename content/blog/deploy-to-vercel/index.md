@@ -2,6 +2,7 @@
 title: Deploy to Vercel
 date: "2020-06-13T12:50:03.284Z"
 description: "Deploy your next.js app to Vercel with GitHub Actions and Free Tier Plan"
+published: true
 ---
 
 ![Vercel](./vercel.jpeg)
