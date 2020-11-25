@@ -46,3 +46,8 @@ jobs:
 
       - name: Add CNAME
         run: echo "maddhruv.xyz" > CNAME
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
