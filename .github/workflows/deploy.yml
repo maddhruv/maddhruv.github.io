@@ -39,3 +39,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: master
+
+      - name: Add CNAME
+        run: echo "maddhruv.xyz" > CNAME
