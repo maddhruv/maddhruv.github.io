@@ -40,5 +40,9 @@ jobs:
           publish_dir: ./public
           publish_branch: master
 
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+
       - name: Add CNAME
-        run: git checkout master && echo "maddhruv.xyz" > CNAME
+        run: echo "maddhruv.xyz" > CNAME
