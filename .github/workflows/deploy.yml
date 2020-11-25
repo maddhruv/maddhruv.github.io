@@ -41,4 +41,4 @@ jobs:
           publish_branch: master
 
       - name: Add CNAME
-        run: echo "maddhruv.xyz" > CNAME
+        run: git checkout master && echo "maddhruv.xyz" > CNAME
