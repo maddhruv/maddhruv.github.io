@@ -1,5 +1,3 @@
-const theme = require("./src/theme")
-
 module.exports = {
   siteMetadata: {
     title: `Dhruv Jain`,
@@ -13,7 +11,6 @@ module.exports = {
       twitter: `maddhruv`,
       github: `maddhruv`,
     },
-    theme,
   },
   plugins: [
     {
@@ -75,8 +72,8 @@ module.exports = {
         name: `Dhruv Jain`,
         short_name: `maddhruv`,
         start_url: `/`,
-        background_color: theme.colors.secondary,
-        theme_color: theme.colors.primary,
+        background_color: "#2cb978",
+        theme_color: "#83e85a",
         display: "standalone",
         icon: "content/assets/avatar-512.png",
       },
@@ -84,4 +81,4 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
   ],
-}
+};

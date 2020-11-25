@@ -1,18 +1,9 @@
-import React from "react"
-import { Flex } from "reflexbox"
-import { useStaticQuery, graphql } from "gatsby"
-import { Avatar } from "./common"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/avatar.png/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author {
@@ -25,12 +16,11 @@ const Bio = () => {
         }
       }
     }
-  `)
+  `);
 
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
   return (
-    <Flex>
-      <Avatar fixed={data.avatar.childImageSharp.fixed} alt={author.name} />
+    <div className="flex">
       <p>
         Written by{" "}
         <strong>
@@ -41,8 +31,8 @@ const Bio = () => {
         <br />
         {author.summary}
       </p>
-    </Flex>
-  )
-}
+    </div>
+  );
+};
 
-export default Bio
+export default Bio;

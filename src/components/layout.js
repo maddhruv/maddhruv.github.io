@@ -1,12 +1,7 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "styled-components"
+import React from "react";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
-import theme from "../theme"
-import Reset from "../utils/reset"
-
-// components
-import { Header, Container } from "./common"
+const DarkMode = React.lazy(() => import("./darkmode"));
 
 const Layout = ({ title, children }) => {
   const data = useStaticQuery(graphql`
@@ -22,27 +17,37 @@ const Layout = ({ title, children }) => {
         }
       }
     }
-  `)
+  `);
 
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
+
+  const isSSR = typeof window === "undefined";
 
   return (
-    <ThemeProvider theme={theme}>
-      <Reset />
-      <Container>
+    <div id="container">
+      <header>
         <Link to="/">
-          <Header>{title}</Header>
+          <h1 id="title">{title}</h1>
         </Link>
-        <main>{children}</main>
-        <footer>
-          Built with <span role="img">😷</span> care by{" "}
-          <a href={`https://github.com/${social.github}`}>
-            {author.name} aka {social.github}
-          </a>
-        </footer>
-      </Container>
-    </ThemeProvider>
-  )
-}
+        {!isSSR && (
+          <React.Suspense fallback={<div />}>
+            <DarkMode />
+          </React.Suspense>
+        )}
+      </header>
+      <main>{children}</main>
+      <footer>
+        Built with{" "}
+        <span role="img" aria-label="care">
+          😷
+        </span>{" "}
+        care by{" "}
+        <a href={`https://github.com/${social.github}`}>
+          {author.name} aka {social.github}
+        </a>
+      </footer>
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;
