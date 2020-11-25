@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://maddhruv.github.io/">
+  <a href="https://maddhruv.xyz?ref=readme">
     <img src="https://raw.githubusercontent.com/maddhruv/maddhruv.github.io/source/content/assets/avatar-256.png" alt="maddhruv" />
     <br />
     Dhruv Jain
