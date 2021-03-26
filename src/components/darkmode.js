@@ -1,5 +1,5 @@
 import React from "react";
-import DarkModeToggle from "react-dark-mode-toggle";
+import { HiSun, HiMoon } from "react-icons/hi";
 
 export default () => {
   const [isDarkMode, setIsDarkMode] = React.useState(
@@ -13,11 +13,12 @@ export default () => {
   }, [isDarkMode]);
 
   return (
-    <DarkModeToggle
-      speed={2.1}
-      checked={isDarkMode}
-      onChange={setIsDarkMode}
-      size={50}
-    />
+    <div id="dark-mode-toggle" onClick={() => setIsDarkMode(!isDarkMode)}>
+      {isDarkMode ? (
+        <HiMoon size="24px" color="#FEFCD7" />
+      ) : (
+        <HiSun size="24px" color="#FDB813" />
+      )}
+    </div>
   );
 };

@@ -14,6 +14,7 @@
 
 html {
   background: var(--bg) !important;
+  transition: all 0.2s ease-out;
 }
 
 html,
@@ -189,4 +190,9 @@ header > a {
 
 article > header {
   display: block;
+}
+
+#dark-mode-toggle {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
