@@ -24,10 +24,10 @@ const Layout = ({ title, children }) => {
   const isSSR = typeof window === "undefined";
 
   return (
-    <div id="container">
+    <div id="📦">
       <header>
         <Link to="/">
-          <h1 id="title">{title}</h1>
+          <h1 id="🥑">{title}</h1>
         </Link>
         {!isSSR && (
           <React.Suspense fallback={<div />}>

@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       </article>
 
       <nav>
-        <ul id="prev-next-links">
+        <ul id="🔗">
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

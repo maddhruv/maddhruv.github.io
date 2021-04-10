@@ -157,7 +157,7 @@ nav > ul {
   list-style: none;
 }
 
-#container {
+#📦 {
   padding: 4vh 20vw 3vh 20vw;
   @media (max-width: 768px) {
     padding: 5vh 5vw 5vh 5vw;
@@ -175,15 +175,15 @@ header > a {
   color: var(--secondary);
 }
 
-#title {
+#🥑 {
   font-weight: 600;
 }
 
-.flex {
+.💪🏽 {
   display: flex;
 }
 
-#prev-next-links {
+#🔗 {
   display: flex;
   justify-content: space-between;
 }
@@ -192,7 +192,7 @@ article > header {
   display: block;
 }
 
-#dark-mode-toggle {
+#🎚 {
   cursor: pointer;
   transition: all 0.3s ease-out;
 }

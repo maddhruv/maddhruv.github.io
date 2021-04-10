@@ -20,7 +20,7 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata;
   return (
-    <div className="flex">
+    <div className="💪🏽">
       <p>
         Written by{" "}
         <strong>

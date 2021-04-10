@@ -13,7 +13,7 @@ export default () => {
   }, [isDarkMode]);
 
   return (
-    <div id="dark-mode-toggle" onClick={() => setIsDarkMode(!isDarkMode)}>
+    <div id="🎚" onClick={() => setIsDarkMode(!isDarkMode)}>
       {isDarkMode ? (
         <HiMoon size="24px" color="#FEFCD7" />
       ) : (
