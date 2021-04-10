@@ -3,7 +3,6 @@ module.exports = {
     title: `Dhruv Jain`,
     author: {
       name: `Dhruv Jain`,
-      summary: `Time is the master`,
     },
     description: `Dhruv Jain's Personal Blog and Portfolio`,
     siteUrl: `https://maddhruv.xyz`,

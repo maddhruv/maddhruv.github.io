@@ -45,14 +45,14 @@ const BlogIndex = ({ data }: PageProps<Data>) => {
         return (
           <article key={node.fields.slug}>
             <header>
-              <h3>
+              <h2>
                 <Link
                   className="link-to-post"
                   to={`${node.fields.slug}?utm=homepage`}
                 >
                   {title}
                 </Link>
-              </h3>
+              </h2>
               <small>{node.frontmatter.date}</small>
             </header>
             <section>

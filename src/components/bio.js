@@ -8,7 +8,6 @@ const Bio = () => {
         siteMetadata {
           author {
             name
-            summary
           }
           social {
             github
@@ -29,7 +28,6 @@ const Bio = () => {
           </a>
         </strong>
         <br />
-        {author.summary}
       </p>
     </div>
   );
