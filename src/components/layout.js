@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 
-const DarkMode = React.lazy(() => import("./darkmode"));
+const ColorSchemes = React.lazy(() => import("./ColorSchemes"));
 
 const Layout = ({ title, children }) => {
   const data = useStaticQuery(graphql`
@@ -31,7 +31,7 @@ const Layout = ({ title, children }) => {
         </Link>
         {!isSSR && (
           <React.Suspense fallback={<div />}>
-            <DarkMode />
+            <ColorSchemes />
           </React.Suspense>
         )}
       </header>
