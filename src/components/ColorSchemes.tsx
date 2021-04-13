@@ -1,4 +1,8 @@
 import React from "react";
+import useSound from "use-sound";
+
+// @ts-ignore
+import kukoo from "../../content/kukoo.mp3";
 
 enum COLOR_SCHEMES {
   GREEN = "green",
@@ -10,6 +14,10 @@ enum COLOR_SCHEMES {
 }
 
 const ColorSchemes: React.FC = () => {
+  const [playKukoo] = useSound(kukoo, {
+    volume: 0.4,
+  });
+
   const [isDarkMode, setIsDarkMode] = React.useState(
     () => window.localStorage.getItem("mode") === "dark"
   );
@@ -35,7 +43,15 @@ const ColorSchemes: React.FC = () => {
     window.localStorage.setItem("scheme", colorScheme);
   }, [colorScheme]);
 
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    playKukoo();
+  };
+
+  const switchColorScheme = (color: COLOR_SCHEMES) => {
+    setColorScheme(color);
+    playKukoo();
+  };
 
   return (
     <>
@@ -45,32 +61,32 @@ const ColorSchemes: React.FC = () => {
       <div
         id="💚"
         className="🎨 gg-shape-circle"
-        onClick={() => setColorScheme(COLOR_SCHEMES.GREEN)}
+        onClick={() => switchColorScheme(COLOR_SCHEMES.GREEN)}
       />
       <div
         id="💙"
         className="🎨 gg-shape-triangle"
-        onClick={() => setColorScheme(COLOR_SCHEMES.BLUE)}
+        onClick={() => switchColorScheme(COLOR_SCHEMES.BLUE)}
       />
       <div
         id="💛"
         className="🎨 gg-shape-square"
-        onClick={() => setColorScheme(COLOR_SCHEMES.YELLOW)}
+        onClick={() => switchColorScheme(COLOR_SCHEMES.YELLOW)}
       />
       <div
         id="💜"
         className="🎨 gg-shape-hexagon"
-        onClick={() => setColorScheme(COLOR_SCHEMES.PURPLE)}
+        onClick={() => switchColorScheme(COLOR_SCHEMES.PURPLE)}
       />
       <div
         id="❤️"
         className="🎨 gg-shape-zigzag"
-        onClick={() => setColorScheme(COLOR_SCHEMES.RED)}
+        onClick={() => switchColorScheme(COLOR_SCHEMES.RED)}
       />
       <div
         id="🖤"
         className="🎨 gg-edit-black-point"
-        onClick={() => setColorScheme(COLOR_SCHEMES.INVERT)}
+        onClick={() => switchColorScheme(COLOR_SCHEMES.INVERT)}
       />
     </>
   );
