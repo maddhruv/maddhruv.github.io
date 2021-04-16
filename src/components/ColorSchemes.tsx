@@ -1,6 +1,8 @@
 import React from "react";
 import useSound from "use-sound";
 
+import { captureEvent } from "../helpers/telemetry";
+
 // @ts-ignore
 import kukoo from "../../content/kukoo.mp3";
 
@@ -28,19 +30,24 @@ const ColorSchemes: React.FC = () => {
 
   React.useEffect(() => {
     const mode = isDarkMode ? "dark" : "light";
-    console.log(mode);
     document.documentElement.setAttribute("data-theme", mode);
     document.documentElement.setAttribute(
       "data-color",
       `${colorScheme}-${mode}`
     );
     window.localStorage.setItem("mode", mode);
+    captureEvent("swithDarkMode", {
+      mode,
+    });
   }, [isDarkMode]);
 
   React.useEffect(() => {
     const scheme = isDarkMode ? `${colorScheme}-dark` : `${colorScheme}-light`;
     document.documentElement.setAttribute("data-color", scheme);
     window.localStorage.setItem("scheme", colorScheme);
+    captureEvent("switchColorScheme", {
+      scheme: colorScheme,
+    });
   }, [colorScheme]);
 
   const toggleDarkMode = () => {
