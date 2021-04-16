@@ -29,7 +29,6 @@ const Layout = ({ title, children }) => {
       .then(posthog => {
         posthog.init(process.env.GATSBY_PH_PROJECT_API_KEY, {
           api_host: process.env.GATSBY_PH_INSTANCE_ADDRESS,
-          loaded: () => console.log("loaded"),
         });
         posthog.capture("$pageview");
       });
