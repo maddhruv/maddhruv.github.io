@@ -24,11 +24,11 @@ const Layout = ({ title, children }) => {
   const isSSR = typeof window === "undefined";
 
   useEffect(() => {
-    console.log(process.env.ph_project_api_key);
+    console.log(process.env.GATSBY_PH_PROJECT_API_KEY);
     import("posthog-js")
       .then(module => module.default)
       .then(posthog => {
-        posthog.init(process.env.ph_project_api_key, {
+        posthog.init(process.env.GATSBY_PH_PROJECT_API_KEY, {
           api_host: process.env.ph_instance_address,
           loaded: () => console.log("loaded"),
         });
