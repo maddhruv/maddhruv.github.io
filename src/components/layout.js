@@ -24,6 +24,7 @@ const Layout = ({ title, children }) => {
   const isSSR = typeof window === "undefined";
 
   useEffect(() => {
+    console.log(process.env.ph_project_api_key);
     import("posthog-js")
       .then(module => module.default)
       .then(posthog => {
