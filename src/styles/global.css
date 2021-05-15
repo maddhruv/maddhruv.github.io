@@ -274,6 +274,10 @@ body {
 }
 h2 {
   font-size: 1.3em;
+  color: var(--primary);
+}
+h3 {
+  color: var(--primary);
 }
 blockquote,
 q {
