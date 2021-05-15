@@ -304,7 +304,7 @@ nav > ul {
 }
 
 #📦 {
-  padding: 4vh 20vw 3vh 20vw;
+  padding: 4vh 10vw 3vh 10vw;
   @media (max-width: 768px) {
     padding: 5vh 5vw 5vh 5vw;
   }
