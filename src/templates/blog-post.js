@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
@@ -9,6 +9,22 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
+
+  useEffect(() => {
+    const utterancesScript = document.createElement("script");
+
+    utterancesScript.setAttribute("src", "https://utteranc.es/client.js");
+    utterancesScript.setAttribute("repo", "maddhruv/maddhruv.github.io");
+    utterancesScript.setAttribute("issue-term", "title");
+    utterancesScript.setAttribute("async", true);
+    utterancesScript.setAttribute("theme", "preferred-color-scheme");
+
+    document.getElementsByTagName("main")[0].appendChild(utterancesScript);
+
+    return () => {
+      document.getElementsByTagName("main")[0].removeChild(utterancesScript);
+    };
+  }, []);
 
   return (
     <Layout location={location} title={siteTitle}>
