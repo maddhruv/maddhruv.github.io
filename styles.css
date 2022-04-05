@@ -1,0 +1,28 @@
+:root {
+  --bg: #333333;
+  --font: #f8f8f8;
+  --primary: #8a95f4;
+}
+
+html,
+body {
+  font-family: "Patrick Hand", cursive;
+  background: var(--bg);
+  color: var(--font);
+  font-size: 28px;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  flex-direction: row;
+  display: flex;
+}
