@@ -1,6 +1,6 @@
 :root {
-  --bg: #333333;
-  --font: #f8f8f8;
+  --bg: #10111a;
+  --font: #dfe3ed;
   --primary: #8a95f4;
   --secondary: #ee8ecd;
 }
@@ -30,6 +30,7 @@ h1 {
   display: flex;
   text-align: center;
   width: fit-content;
+  color: var(--primary);
 }
 
 main {
