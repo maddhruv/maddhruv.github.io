@@ -2,6 +2,7 @@
   --bg: #333333;
   --font: #f8f8f8;
   --primary: #8a95f4;
+  --secondary: #ee8ecd;
 }
 
 html,
@@ -10,9 +11,11 @@ body {
   background: var(--bg);
   color: var(--font);
   font-size: 28px;
-  padding: 32px;
+  padding-top: 32px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   letter-spacing: 5px;
 }
 
@@ -24,5 +27,12 @@ body {
 
 h1 {
   flex-direction: row;
+  display: flex;
+  text-align: center;
+  width: fit-content;
+}
+
+main {
+  height: 70vh;
   display: flex;
 }
