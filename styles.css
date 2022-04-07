@@ -1,8 +1,10 @@
 :root {
   --bg: #10111a;
   --font: #dfe3ed;
-  --primary: #8a95f4;
-  --secondary: #ee8ecd;
+  --purple: #8a95f4;
+  --pink: #ee8ecd;
+  --green: #48bca1;
+  --yellow: #f47b53;
 }
 
 html,
@@ -30,7 +32,7 @@ h1 {
   display: flex;
   text-align: center;
   width: fit-content;
-  color: var(--primary);
+  color: var(--purple);
 }
 
 main {
