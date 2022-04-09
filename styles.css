@@ -39,3 +39,8 @@ main {
   height: 70vh;
   display: flex;
 }
+
+a {
+  color: var(--font);
+  text-decoration: none;
+}
