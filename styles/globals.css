@@ -1,0 +1,234 @@
+:root {
+  --green-light: #2ecc71;
+  --green-dark: #27ae60;
+  --blue-light: #3498db;
+  --blue-dark: #2980b9;
+  --yellow-light: #f1c40f;
+  --yellow-dark: #f39c12;
+  --purple-light: #9b59b6;
+  --purple-dark: #8e44ad;
+  --red-light: #e74c3c;
+  --red-dark: #c0392b;
+  --black-light: #34495e;
+  --black-dark: #242728;
+  --white-light: #e6e9ed;
+  --white-dark: #7b8b94;
+
+  --primary: var(--blue-dark);
+  --secondary: var(--blue-light);
+  --bg: var(--black-dark);
+  --font: var(--white-light);
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  color: var(--font);
+  font-size: 20px;
+  background: var(--bg);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* tags */
+.CSS {
+  color: var(--blue-light);
+}
+.JavaScript {
+  color: var(--yellow-light);
+}
+.Testing {
+  color: var(--green-light);
+}
+.GitHub {
+  color: var(--white-light);
+}
+/* Home Page Stylings */
+.🏠 {
+  padding: 70px;
+}
+.🐶 {
+  height: 35vh;
+  display: flex;
+}
+.📇 {
+  width: 90%;
+}
+.👦🏼 {
+  font-size: 200px;
+  font-weight: 500;
+}
+.🧑🏽‍💻 {
+  color: var(--white-dark);
+}
+.🔖 {
+  width: 10%;
+}
+.📑 {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 25%);
+  border-top: 1px solid var(--white-dark);
+  border-left: 1px solid var(--white-dark);
+}
+.📜 {
+  aspect-ratio: 1.5/1;
+  padding: 20px;
+  border-right: 1px solid var(--white-dark);
+  border-bottom: 1px solid var(--white-dark);
+  cursor: pointer;
+}
+.🏷 {
+}
+
+.📆 {
+  margin-top: 8px;
+  color: var(--white-dark);
+}
+.🐨 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+/* Blog Page */
+.🏫 {
+  padding: 10px 70px;
+}
+.🦋 {
+  cursor: pointer;
+  color: var(--white-light);
+  margin-bottom: 10px;
+}
+.📔 {
+  background: var(--white-light);
+  color: var(--black-dark);
+  padding: 50px;
+}
+.📔 a {
+  color: var(--blue-light);
+}
+.📟 {
+  color: var(--black-dark);
+  font-size: 1.4rem;
+}
+
+/* Notion Styles */
+.notion-h:hover .notion-hash-link,
+.notion-h:hover {
+  cursor: pointer;
+  fill: var(--blue-dark);
+  color: var(--blue-dark);
+}
