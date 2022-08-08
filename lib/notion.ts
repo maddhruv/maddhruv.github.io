@@ -45,7 +45,7 @@ export const getPages = async () => {
     database.results.map(({ id }) => getPage(id, properties))
   );
 
-  return pages;
+  return pages.filter((page) => page.published);
 };
 
 export const getPageData = async (title) => {

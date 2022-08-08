@@ -138,6 +138,39 @@ a {
   color: inherit;
 }
 
+/* ngprogress */
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: var(--white-light);
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px var(--white-light), 0 0 5px var(--white-light);
+  opacity: 1;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
 /* tags */
 .CSS {
   color: var(--blue-light);
@@ -149,7 +182,7 @@ a {
   color: var(--green-light);
 }
 .GitHub {
-  color: var(--white-light);
+  color: var(--purple-light);
 }
 /* Home Page Stylings */
 .🏠 {
@@ -168,6 +201,9 @@ a {
 }
 .🧑🏽‍💻 {
   color: var(--white-dark);
+}
+.🧑🏽‍💻:hover {
+  color: var(--blue-light);
 }
 .🔖 {
   width: 10%;
@@ -191,6 +227,7 @@ a {
 
 .📆 {
   margin-top: 8px;
+  font-size: 0.9em;
   color: var(--white-dark);
 }
 .🐨 {
@@ -213,22 +250,27 @@ a {
   margin-bottom: 10px;
 }
 .📔 {
-  background: var(--white-light);
-  color: var(--black-dark);
+  /* background: var(--white-light); */
+  /* color: var(--black-dark); */
   padding: 50px;
 }
 .📔 a {
-  color: var(--blue-light);
+  color: var(--yellow-light);
 }
 .📟 {
-  color: var(--black-dark);
+  /* color: var(--black-dark); */
   font-size: 1.4rem;
+}
+.🦁 {
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-size: 3rem;
 }
 
 /* Notion Styles */
 .notion-h:hover .notion-hash-link,
 .notion-h:hover {
   cursor: pointer;
-  fill: var(--blue-dark);
-  color: var(--blue-dark);
+  fill: var(--blue-light);
+  color: var(--blue-light);
 }
