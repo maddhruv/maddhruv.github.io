@@ -4,14 +4,17 @@ const socials = [
   {
     icon: () => <Github />,
     link: "https://github.com/maddhruv",
+    label: "GitHub",
   },
   {
     icon: () => <LinkedIn />,
     link: "https://www.linkedin.com/in/midhruvjaink/",
+    label: "LinkedIn",
   },
   {
     icon: () => <Twitter />,
     link: "https://twitter.com/maddhruv",
+    label: "Twitter",
   },
 ];
 
@@ -21,7 +24,11 @@ export const Socials = () => {
       {socials.map((social) => {
         return (
           <li>
-            <a href={social.link} target="_blank">
+            <a
+              aria-label={`${social.label} link`}
+              href={social.link}
+              target="_blank"
+            >
               {social.icon()}
             </a>
           </li>

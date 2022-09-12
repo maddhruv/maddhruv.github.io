@@ -5,7 +5,7 @@
   --blue-dark: #2980b9;
   --yellow-light: #f1c40f;
   --yellow-dark: #f39c12;
-  --purple-light: #9b59b6;
+  --purple-light: #d57ef9;
   --purple-dark: #8e44ad;
   --red-light: #e74c3c;
   --red-dark: #c0392b;
@@ -228,7 +228,7 @@ a {
 .📆 {
   margin-top: 8px;
   font-size: 0.9em;
-  color: var(--white-dark);
+  color: var(--white-light);
 }
 .🐨 {
   height: 100%;

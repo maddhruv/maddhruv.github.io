@@ -21,11 +21,12 @@ const Code = dynamic(() =>
 );
 
 const Blog = ({ pageData }) => {
-  const { recordMap, title, tags, date } = pageData;
+  const { recordMap, title, tags, date, description } = pageData;
   return (
     <>
       <Head>
         <title>{title} - Dhruv Jain</title>
+        <meta name="description" content={description} />
       </Head>
       <div className="🏫">
         <Link href="/">
