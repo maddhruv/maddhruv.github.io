@@ -11,6 +11,10 @@ const IndexPage = ({ pages }) => {
     <>
       <Head>
         <title>Dhruv Jain</title>
+        <meta
+          name="description"
+          content="Dhruv Jain's blog - sharing ideas and knowlege around JavaScript, TypeScript, React and Coding in general."
+        />
       </Head>
       <div className="🏠">
         <header className="🐶">

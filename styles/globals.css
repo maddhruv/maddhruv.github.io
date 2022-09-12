@@ -186,7 +186,7 @@ a {
 }
 /* Home Page Stylings */
 .🏠 {
-  padding: 70px;
+  padding: min(70px, 10vw);
 }
 .🐶 {
   height: 35vh;
@@ -196,10 +196,11 @@ a {
   width: 90%;
 }
 .👦🏼 {
-  font-size: 200px;
+  font-size: max(48px, 5vw);
   font-weight: 500;
 }
 .🧑🏽‍💻 {
+  font-size: max(26px, 1vw);
   color: var(--white-dark);
 }
 .🧑🏽‍💻:hover {
@@ -285,4 +286,36 @@ ul {
   margin-top: 10px;
   display: flex;
   gap: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .🏫 {
+    padding: 10px 40px;
+  }
+  .🐶 {
+    height: 20vh;
+  }
+  .📑 {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .📜 {
+    aspect-ratio: 4/1;
+  }
+  .🐨 {
+    font-size: 1.3rem;
+  }
+  .🏷 {
+    font-size: 1rem;
+  }
+  .📆 {
+    font-size: 1rem;
+  }
+  .📔,
+  .notion-page {
+    padding: 0;
+  }
+  .🦁 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
 }
