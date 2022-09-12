@@ -274,3 +274,15 @@ a {
   fill: var(--blue-light);
   color: var(--blue-light);
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#🌐 {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+}

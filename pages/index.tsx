@@ -4,6 +4,7 @@ import { CreatedAt } from "../components/created-at";
 import { Tags } from "../components/tags";
 import { getPages } from "../lib/notion";
 import { getPageTitle } from "../lib/utils";
+import { Socials } from "../components/socials";
 
 const IndexPage = ({ pages }) => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = ({ pages }) => {
             <a href="https://www.linkedin.com/in/midhruvjaink/">
               <h2 className="🧑🏽‍💻">Software Engineer @LinkedIn</h2>
             </a>
+            <Socials />
           </div>
           <div className="🔖">All Posts</div>
         </header>

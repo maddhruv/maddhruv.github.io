@@ -22,6 +22,7 @@
   "homepage": "https://github.com/maddhruv/maddhruv.github.io#readme",
   "dependencies": {
     "@notionhq/client": "^2.2.0",
+    "@react-icons/all-files": "^4.1.0",
     "next": "^12.3.0",
     "next-seo": "^5.5.0",
     "notion-client": "^6.13.8",
@@ -29,6 +30,7 @@
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
     "react-notion-x": "^6.13.9",
     "typescript": "^4.8.3"
   },
