@@ -1,17 +1,17 @@
 :root {
   --green-light: #2ecc71;
   --green-dark: #27ae60;
-  --blue-light: #3498db;
+  --blue-light: #00beff;
   --blue-dark: #2980b9;
-  --yellow-light: #f1c40f;
+  --yellow-light: #ffe100;
   --yellow-dark: #f39c12;
   --purple-light: #d57ef9;
   --purple-dark: #8e44ad;
   --red-light: #e74c3c;
   --red-dark: #c0392b;
   --black-light: #34495e;
-  --black-dark: #242728;
-  --white-light: #e6e9ed;
+  --black-dark: #0e141b;
+  --white-light: #ffffff;
   --white-dark: #7b8b94;
 
   --primary: var(--blue-dark);
@@ -137,6 +137,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+figcaption {
+  text-align: center;
+  color: var(--white-dark) !important;
+}
 
 /* ngprogress */
 
@@ -183,6 +187,9 @@ a {
 }
 .GitHub {
   color: var(--purple-light);
+}
+.React {
+  color: var(--blue-light);
 }
 /* Home Page Stylings */
 .🏠 {
@@ -269,6 +276,9 @@ a {
 }
 
 /* Notion Styles */
+.notion-h {
+  color: var(--blue-light);
+}
 .notion-h:hover .notion-hash-link,
 .notion-h:hover {
   cursor: pointer;
