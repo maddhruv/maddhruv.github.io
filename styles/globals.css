@@ -258,15 +258,12 @@ figcaption {
   margin-bottom: 10px;
 }
 .📔 {
-  /* background: var(--white-light); */
-  /* color: var(--black-dark); */
   padding: 50px;
 }
 .📔 a {
   color: var(--yellow-light);
 }
 .📟 {
-  /* color: var(--black-dark); */
   font-size: 1.4rem;
 }
 .🦁 {
