@@ -1,12 +1,14 @@
 import { NotionRenderer } from "react-notion-x";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 import { getPageData, getPages } from "../../lib/notion";
 import { getPageTitle } from "../../lib/utils";
 import { Tags } from "../../components/tags";
 import Link from "next/link";
 import { CreatedAt } from "../../components/created-at";
+import config from "../../lib/config";
 
 const Code = dynamic(() =>
   import("react-notion-x/build/third-party/code").then(async (m) => {
@@ -22,12 +24,24 @@ const Code = dynamic(() =>
 
 const Blog = ({ pageData }) => {
   const { recordMap, title, tags, date, description } = pageData;
+  const { appLink } = config;
+  const blogUrl = `${appLink}/blog/${getPageTitle(title)}`;
   return (
     <>
       <Head>
         <title>{title} - Dhruv Jain</title>
         <meta name="description" content={description} />
       </Head>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={blogUrl}
+        openGraph={{
+          title,
+          description,
+          url: blogUrl,
+        }}
+      />
       <div className="🏫">
         <Link href="/">
           <h2 className="🦋">Dhruv Jain</h2>

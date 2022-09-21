@@ -1,21 +1,22 @@
 import Link from "next/link";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { CreatedAt } from "../components/created-at";
 import { Tags } from "../components/tags";
 import { getPages } from "../lib/notion";
 import { getPageTitle } from "../lib/utils";
 import { Socials } from "../components/socials";
+import config from "../lib/config";
 
 const IndexPage = ({ pages }) => {
+  const { title, description, appLink } = config;
   return (
     <>
       <Head>
-        <title>Dhruv Jain</title>
-        <meta
-          name="description"
-          content="Dhruv Jain's blog - sharing ideas and knowlege around JavaScript, TypeScript, React and Coding in general."
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
       </Head>
+      <NextSeo title={title} description={description} canonical={appLink} />
       <div className="🏠">
         <header className="🐶">
           <div className="📇">
