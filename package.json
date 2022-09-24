@@ -27,6 +27,7 @@
     "next-seo": "^5.5.0",
     "notion-client": "^6.13.8",
     "nprogress": "^0.2.0",
+    "posthog-js": "^1.31.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

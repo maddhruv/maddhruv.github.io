@@ -23,7 +23,7 @@ export const Socials = () => {
     <ul id="🌐">
       {socials.map((social) => {
         return (
-          <li>
+          <li key={social.link}>
             <a
               aria-label={`${social.label} link`}
               href={social.link}

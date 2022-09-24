@@ -31,7 +31,7 @@ const IndexPage = ({ pages }) => {
         <main className="📑">
           {pages.map(({ tags, date, title }) => {
             return (
-              <Link href={`/blog/${getPageTitle(title)}`}>
+              <Link href={`/blog/${getPageTitle(title)}`} key={title}>
                 <a className="📜">
                   <Tags tags={tags} />
                   <CreatedAt date={date} />
