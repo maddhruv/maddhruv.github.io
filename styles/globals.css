@@ -1,14 +1,14 @@
 :root {
-  --green-light: #2ecc71;
-  --green-dark: #27ae60;
-  --blue-light: #00beff;
-  --blue-dark: #2980b9;
-  --yellow-light: #ffe100;
-  --yellow-dark: #f39c12;
-  --purple-light: #d57ef9;
-  --purple-dark: #8e44ad;
-  --red-light: #e74c3c;
-  --red-dark: #c0392b;
+  --green-light: #50fa7b;
+  --green-dark: #2ecc71;
+  --blue-light: #8be9fd;
+  --blue-dark: #00beff;
+  --yellow-light: #f1fa8c;
+  --yellow-dark: #ffe100;
+  --purple-light: #bd93f9;
+  --purple-dark: #d57ef9;
+  --red-light: #ff5555;
+  --red-dark: #e74c3c;
   --black-light: #34495e;
   --black-dark: #0e141b;
   --white-light: #ffffff;
@@ -177,19 +177,19 @@ figcaption {
 
 /* tags */
 .CSS {
-  color: var(--blue-light);
+  color: var(--blue-dark);
 }
 .JavaScript {
-  color: var(--yellow-light);
+  color: var(--yellow-dark);
 }
 .Testing {
-  color: var(--green-light);
+  color: var(--green-dark);
 }
 .GitHub {
-  color: var(--purple-light);
+  color: var(--purple-dark);
 }
 .React {
-  color: var(--blue-light);
+  color: var(--blue-dark);
 }
 /* Home Page Stylings */
 .🏠 {
@@ -282,7 +282,27 @@ figcaption {
   fill: var(--blue-light);
   color: var(--blue-light);
 }
-
+.notion-table-of-contents > a:nth-child(1) {
+  display: none;
+}
+.notion-table-of-contents > a {
+  opacity: 1;
+  font-size: 16px;
+}
+.notion-link {
+  opacity: 1;
+}
+.notion-table-of-contents > a > span {
+  border: none;
+}
+.notion-inline-code {
+  color: var(--green);
+}
+b,
+strong {
+  color: var(--pink);
+  font-weight: 600;
+}
 ul {
   list-style: none;
   margin: 0;

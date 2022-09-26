@@ -13,11 +13,7 @@ import config from "../../lib/config";
 const Code = dynamic(() =>
   import("react-notion-x/build/third-party/code").then(async (m) => {
     // additional prism syntaxes
-    await Promise.all([
-      import("prismjs/components/prism-git.js"),
-      import("prismjs/components/prism-go.js"),
-      import("prismjs/components/prism-yaml.js"),
-    ]);
+    await Promise.all([import("prismjs/components/prism-yaml.js")]);
     return m.Code;
   })
 );

@@ -5,9 +5,9 @@ import posthog from "posthog-js";
 import { useEffect } from "react";
 
 import "react-notion-x/src/styles.css";
-import "prismjs/themes/prism-tomorrow.css";
 import config from "../lib/config";
 import "../styles/globals.css";
+import "../styles/code-theme.css";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => {

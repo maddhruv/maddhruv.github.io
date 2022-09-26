@@ -34,6 +34,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"
+          />
         </Head>
         <body className="bg-white-regular dark:bg-black-light">
           <Main />
