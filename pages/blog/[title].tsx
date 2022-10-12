@@ -9,6 +9,7 @@ import { Tags } from "../../components/tags";
 import Link from "next/link";
 import { CreatedAt } from "../../components/created-at";
 import config from "../../lib/config";
+import { useEffect } from "react";
 
 const Code = dynamic(() =>
   import("react-notion-x/build/third-party/code").then(async (m) => {
@@ -22,6 +23,22 @@ const Blog = ({ pageData }) => {
   const { recordMap, title, tags, date, description } = pageData;
   const { appLink } = config;
   const blogUrl = `${appLink}/blog/${getPageTitle(title)}`;
+
+  useEffect(() => {
+    const commentsSection = document.getElementById("comments-section");
+    const script = document.createElement("script");
+    script.src = "https://utteranc.es/client.js";
+    script.setAttribute("repo", "maddhruv/maddhruv.github.io");
+    script.setAttribute("issue-term", "title");
+    script.setAttribute("theme", "github-dark");
+    script.crossOrigin = "anonymous";
+    script.async = true;
+
+    commentsSection.appendChild(script);
+
+    return () => (commentsSection.innerHTML = null);
+  }, []);
+
   return (
     <>
       <Head>
@@ -56,6 +73,7 @@ const Blog = ({ pageData }) => {
               components={{ Code }}
             />
           </main>
+          <section id="comments-section" />
         </div>
       </div>
     </>
