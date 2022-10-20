@@ -455,6 +455,10 @@ pre[class*="language-"] {
 .token.namespace {
   color: #e2777a;
 }
+.token.dom,
+.token.property-access {
+  color: rgba(189, 147, 249, 1);
+}
 
 /* Line Highlighter */
 
