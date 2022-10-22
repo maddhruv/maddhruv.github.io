@@ -53,6 +53,11 @@ const Blog = ({ pageData }) => {
           title,
           description,
           url: blogUrl,
+          images: [
+            {
+              url: `${config.host}/api/og?title=${title}&description=${description}&tags=${tags}`,
+            },
+          ],
         }}
       />
       <div className="🏫">

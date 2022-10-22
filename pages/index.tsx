@@ -16,7 +16,21 @@ const IndexPage = ({ pages }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Head>
-      <NextSeo title={title} description={description} canonical={appLink} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={appLink}
+        openGraph={{
+          title,
+          description,
+          url: config.appLink,
+          images: [
+            {
+              url: `${config.host}/api/og?title=${title}&description=${description}`,
+            },
+          ],
+        }}
+      />
       <div className="🏠">
         <header className="🐶">
           <div className="📇">
