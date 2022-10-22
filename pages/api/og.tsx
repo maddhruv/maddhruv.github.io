@@ -9,8 +9,8 @@ interface BannerImage {
   position: string;
 }
 
-const HEIGHT = 1200;
-const WIDTH = 630;
+const HEIGHT = 630;
+const WIDTH = 1200;
 
 const bannerImages: Record<string, BannerImage> = {
   react: {
@@ -47,6 +47,7 @@ export default function handler(req) {
           height: `${HEIGHT}px`,
           width: `${WIDTH}px`,
           display: "flex",
+          alignItems: "center",
           flexDirection: "column",
           justifyContent: "center",
           backgroundColor: "#0e141b",
