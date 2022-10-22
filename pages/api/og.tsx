@@ -9,6 +9,9 @@ interface BannerImage {
   position: string;
 }
 
+const HEIGHT = "1200px";
+const WIDTH = "630px";
+
 const bannerImages: Record<string, BannerImage> = {
   react: {
     url: "https://nextsoftware.io/files/images/logos/main/reactjs-logo.png",
@@ -41,8 +44,8 @@ export default function handler(req) {
     (
       <div
         style={{
-          height: "100%",
-          width: "100%",
+          height: HEIGHT,
+          width: WIDTH,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -105,6 +108,10 @@ export default function handler(req) {
           <span>maddhruv.dev</span>
         </div>
       </div>
-    )
+    ),
+    {
+      width: WIDTH,
+      height: HEIGHT,
+    }
   );
 }
