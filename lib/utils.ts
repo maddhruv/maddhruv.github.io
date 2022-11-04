@@ -27,5 +27,3 @@ export const getPropertyValue = (name, response) => {
     return { tags: response.multi_select.map(({ name }) => name) };
   }
 };
-
-export const getOGUrl = ({ title, description, tags }) => {};

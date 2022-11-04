@@ -51,22 +51,20 @@ export const getPages = async () => {
 };
 
 export const getPageData = async (title) => {
-  const pageSearch = await notion.search({
-    query: title,
+  const pages = await getPages();
+
+  const pageFind = pages.find((page) => {
+    return (
+      page.title.toLowerCase() === title.split("-").join(" ").toLowerCase()
+    );
   });
 
-  const pageData = pageSearch.results[0];
-
-  const page_id = pageData.id;
+  const page_id = pageFind.id;
 
   const recordMap = await notionAPI.getPage(page_id);
 
-  // @ts-ignore
-  const properties = getProperties(pageData.properties);
-  const page = await getPage(page_id, properties);
-
   return {
     recordMap,
-    ...page,
+    ...pageFind,
   };
 };
