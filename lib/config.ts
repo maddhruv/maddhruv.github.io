@@ -1,9 +1,11 @@
+const websiteUrl = "https://maddhruv.dev";
+
 const config = {
-  appLink: "https://maddhruv.dev",
+  appLink: websiteUrl,
   host:
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://maddhruv.dev",
+      : websiteUrl,
   title: "Dhruv Jain",
   description:
     "Dhruv Jain's blog - sharing ideas and knowlege around JavaScript, TypeScript, React and Coding in general.",

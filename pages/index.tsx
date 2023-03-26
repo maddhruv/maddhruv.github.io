@@ -41,6 +41,9 @@ const IndexPage = ({ pages }) => {
             <Socials />
           </div>
           <div className="🔖">All Posts</div>
+          <div className="🔖">
+            <Link href="/rss.xml">RSS</Link>
+          </div>
         </header>
         <main className="📑">
           {pages.map(({ tags, date, title }) => {

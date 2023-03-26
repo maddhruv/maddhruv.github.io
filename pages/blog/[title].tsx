@@ -10,6 +10,7 @@ import Link from "next/link";
 import { CreatedAt } from "../../components/created-at";
 import config from "../../lib/config";
 import { useEffect } from "react";
+import { generateRss } from "../../lib/generateRss";
 
 const Code = dynamic(() =>
   import("react-notion-x/build/third-party/code").then(async (m) => {
@@ -101,6 +102,8 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   const pages = await getPages();
+
+  generateRss(pages);
 
   return {
     paths: pages.map((page) => `/blog/${getPageTitle(page.title)}`),
