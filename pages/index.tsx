@@ -48,12 +48,14 @@ const IndexPage = ({ pages }) => {
         <main className="📑">
           {pages.map(({ tags, date, title }) => {
             return (
-              <Link href={`/blog/${getPageTitle(title)}`} key={title}>
-                <a className="📜">
-                  <Tags tags={tags} />
-                  <CreatedAt date={date} />
-                  <h3 className="🐨">{title}</h3>
-                </a>
+              <Link
+                href={`/blog/${getPageTitle(title)}`}
+                key={title}
+                className="📜"
+              >
+                <Tags tags={tags} />
+                <CreatedAt date={date} />
+                <h3 className="🐨">{title}</h3>
               </Link>
             );
           })}

@@ -18,11 +18,16 @@ export const generateRss = (pages) => {
     feed.item({
       title: page.title,
       description: page.description,
-      url: `/blog/${getPageTitle(page.title)}`,
+      url: `/blog/${getPageTitle(
+        page.title
+      )}?utm_source=rss&utm_medium=rss&utm_campaign=rss`,
       date: page.date,
     });
   });
 
-  fs.mkdirSync("./public");
+  if (!fs.existsSync("./public")) {
+    fs.mkdirSync("./public");
+  }
+
   fs.writeFileSync("./public/rss.xml", feed.xml({ indent: true }));
 };
