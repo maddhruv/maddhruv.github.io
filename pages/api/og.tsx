@@ -21,6 +21,10 @@ const bannerImages: Record<string, BannerImage> = {
     url: "https://assets.stickpng.com/images/613b64fe30e8530004ba3a03.png",
     position: "-90px",
   },
+  typescript: {
+    url: "https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png",
+    position: "-10px",
+  },
 };
 
 const getBannerImage = (tags: string): BannerImage | undefined => {
