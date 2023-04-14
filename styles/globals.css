@@ -14,6 +14,11 @@
   --white-light: hsl(60, 30%, 96%);
   --white-dark: #7b8b94;
 
+  --css: #2965f1;
+  --react: #61dbfb;
+  --javascript: #f0db4f;
+  --typescript: #007acc;
+
   --primary: var(--blue-dark);
   --secondary: var(--blue-light);
   --bg: var(--black-dark);
@@ -177,10 +182,10 @@ figcaption {
 
 /* tags */
 .CSS {
-  color: var(--blue-dark);
+  color: var(--css);
 }
 .JavaScript {
-  color: var(--yellow-dark);
+  color: var(--javascript);
 }
 .Testing {
   color: var(--green-dark);
@@ -189,7 +194,10 @@ figcaption {
   color: var(--purple-dark);
 }
 .React {
-  color: var(--blue-dark);
+  color: var(--react);
+}
+.TypeScript {
+  color: var(--typescript);
 }
 /* Home Page Stylings */
 .🏠 {
@@ -265,6 +273,7 @@ figcaption {
 }
 .📟 {
   font-size: 1.4rem;
+  width: 70%;
 }
 .🦁 {
   margin-top: 10px;
@@ -347,5 +356,8 @@ ol > ol {
   .🦁 {
     font-size: 2rem;
     margin-top: 20px;
+  }
+  .📟 {
+    width: 100%;
   }
 }
