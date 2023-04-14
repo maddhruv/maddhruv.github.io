@@ -11,7 +11,7 @@
   --red-dark: #e74c3c;
   --black-light: #34495e;
   --black-dark: #0e141b;
-  --white-light: #ffffff;
+  --white-light: hsl(60, 30%, 96%);
   --white-dark: #7b8b94;
 
   --primary: var(--blue-dark);

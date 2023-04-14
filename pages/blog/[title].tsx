@@ -1,5 +1,4 @@
 import { NotionRenderer } from "react-notion-x";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
 
@@ -11,14 +10,7 @@ import { CreatedAt } from "../../components/created-at";
 import config from "../../lib/config";
 import { useEffect } from "react";
 import { generateRss } from "../../lib/generateRss";
-
-const Code = dynamic(() =>
-  import("react-notion-x/build/third-party/code").then(async (m) => {
-    // additional prism syntaxes
-    await Promise.all([import("prismjs/components/prism-yaml.js")]);
-    return m.Code;
-  })
-);
+import { Code } from "../../components/code";
 
 const Blog = ({ pageData }) => {
   const { recordMap, title, tags, date, description } = pageData;

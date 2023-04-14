@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "slides.maddhruv.dev"
+        }
+      ],
+      "destination": "/app/:path*"
+    }
+  ]
+}
