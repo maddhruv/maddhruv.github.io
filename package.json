@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "prepare": "npx types-sync",
-    "postinstall": "npx types-sync",
-    "rss": "ts-node-esm lib/generateRss.ts"
+    "postinstall": "npx types-sync"
   },
   "repository": {
     "type": "git",
@@ -51,7 +50,6 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
-    "ts-node": "^10.9.1",
     "types-sync": "^3.28.0"
   }
 }

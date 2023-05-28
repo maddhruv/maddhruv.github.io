@@ -17,7 +17,6 @@ export const generateRss = async () => {
   const feed = new RSS(feedOptions);
 
   posts.forEach((page) => {
-    console.log(page);
     feed.item({
       title: page.title,
       description: page.description,
