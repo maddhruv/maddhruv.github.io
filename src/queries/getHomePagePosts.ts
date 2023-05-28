@@ -3,7 +3,7 @@ import { removeDuplicates } from "@/lib/utils";
 import { groq } from "next-sanity";
 
 export const query = groq`
-*[_type == "post" && !(_id in path('drafts.**'))] | order(date desc, _createdAt desc) [$from...$to] {
+*[_type == "post" && !(_id in path('drafts.**')) && isPublished == true] | order(date desc, _createdAt desc) [$from...$to] {
   _id,
   title,
   description,

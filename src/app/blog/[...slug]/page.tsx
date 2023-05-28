@@ -81,11 +81,11 @@ export default async function Page({ params }) {
                   return <Code {...props} />;
                 },
                 image: (props) => {
-                  console.log(props);
                   return (
                     <img
                       src={urlForImage(props.value).url()}
                       className="lg:max-w-screen-md my-2 mx-auto"
+                      alt={post.title}
                     />
                   );
                 },
@@ -96,7 +96,7 @@ export default async function Page({ params }) {
 
         <section id="related-posts" className="my-6">
           <h2 className="text-3xl font-medium text-red">Related Posts</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-rows lg:grid-cols-3 gap-4">
             {relatedPosts.map((post) => (
               <RelatedPost post={post} />
             ))}

@@ -3,7 +3,7 @@ import { removeDuplicates } from "@/lib/utils";
 import { groq } from "next-sanity";
 
 export const query = groq`
-*[_type == "post" && !(_id in path('drafts.**')) && (categories[]->name match $category)]{
+*[_type == "post" && !(_id in path('drafts.**')) && isPublished == true && (categories[]->name match $category)]{
   title,
   description,
   "coverImage": coverImage.asset->url,

@@ -8,3 +8,4 @@ Built with Next.js, Sanity, TailwindCSS
 - [] Blog Images
 - [] Code Blocks
 - [] GA and Search Console
+- [] Footer

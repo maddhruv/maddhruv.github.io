@@ -84,7 +84,12 @@ const PostSchema: SchemaTypeDefinition = {
       name: "pageView",
       title: "Page View",
       type: "number",
-      // hidden: true,
+      hidden: true,
+    },
+    {
+      name: "isPublished",
+      title: "Is Published",
+      type: "boolean",
     },
   ],
   preview: {
@@ -94,6 +99,7 @@ const PostSchema: SchemaTypeDefinition = {
   },
   initialValue: {
     pageView: 0,
+    isPublished: false,
   },
 };
 
