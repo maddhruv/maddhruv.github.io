@@ -3,6 +3,7 @@ import { Fira_Code } from "next/font/google";
 
 import "./global.css";
 import { Metadata } from "next";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: config.siteTitle,
@@ -42,7 +43,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${firaCode.className} p-2`}>{children}</body>
+      <body className={`${firaCode.className} p-2`}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

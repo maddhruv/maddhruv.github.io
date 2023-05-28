@@ -16,7 +16,7 @@ export const PostCard = ({ post, index }) => {
               style={{
                 minHeight: "210px",
               }}
-              className="object-cover w-full h-full"
+              className="object-cover"
             />
           </Link>
         </div>
