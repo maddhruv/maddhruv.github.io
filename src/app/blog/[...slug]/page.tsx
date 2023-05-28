@@ -1,6 +1,7 @@
 import { Code } from "@/components/code";
 import { CreatedAt } from "@/components/created-at";
 import { Header } from "@/components/header";
+import { PageView } from "@/components/pageview";
 import { RelatedPost } from "@/components/related-post";
 import config from "@/lib/config";
 import { getImageUrl, removeDuplicates } from "@/lib/utils";
@@ -58,6 +59,7 @@ export default async function Page({ params }) {
   return (
     <>
       <Header location="post" />
+      <PageView id={post._id} />
       <main>
         <h1 className="text-4xl text-purple font-medium">{post.title}</h1>
         <CreatedAt date={post._createdAt} />

@@ -4,4 +4,4 @@ Built with Next.js, Sanity, TailwindCSS
 
 ## TODO
 
-- [] PageViews
+- [] Code Theme

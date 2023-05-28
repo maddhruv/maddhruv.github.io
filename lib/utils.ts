@@ -26,3 +26,11 @@ export const getImageUrl = (image: string, location: ImageLocation): string => {
   }
   return image;
 };
+
+export const formatNumber = (number: number): string => {
+  return new Intl.NumberFormat("en-US").format(number);
+};
+
+export const getPageNumber = (page: string): number => {
+  return parseInt(page) || 1;
+};
