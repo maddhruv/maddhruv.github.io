@@ -2,11 +2,31 @@ import config from "@/lib/config";
 import { Fira_Code } from "next/font/google";
 
 import "./global.css";
-import { generateRss } from "@/lib/generateRss";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: config.siteTitle,
   description: config.description,
+  applicationName: config.siteTitle,
+  authors: {
+    name: config.title,
+  },
+  keywords: config.keywords,
+  creator: config.title,
+  publisher: config.title,
+  openGraph: {
+    type: "website",
+    url: config.appLink,
+    title: config.siteTitle,
+    description: config.description,
+    siteName: config.siteTitle,
+  },
+  twitter: {
+    site: "@maddhruv",
+    creator: "@maddhruv",
+    title: config.siteTitle,
+    description: config.description,
+  },
 };
 
 const firaCode = Fira_Code({

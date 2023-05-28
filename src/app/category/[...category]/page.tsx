@@ -1,9 +1,29 @@
 import { getPostsByCategory } from "@/src/queries/getPostsByCategory";
 import { Header } from "@/components/header";
 import { PostCard } from "@/components/post-card";
+import { Metadata } from "next";
+import config from "@/lib/config";
 
 export const revalidate = 60;
 
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const category = decodeURIComponent(params.category[0]);
+
+  return {
+    title: `Category: ${category}`,
+    description: `Posts for the category: ${category}`,
+    openGraph: {
+      type: "website",
+      title: `Category: ${category}`,
+      description: `Posts for the category: ${category}`,
+      siteName: config.title,
+    },
+    twitter: {
+      title: `Category: ${category}`,
+      description: `Posts for the category: ${category}`,
+    },
+  };
+}
 export default async function Page({ params }) {
   const category = decodeURIComponent(params.category[0]);
   const posts = await getPostsByCategory(category);

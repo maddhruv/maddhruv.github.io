@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: /studio/, /i/
+Sitemap: https://maddhruv.dev/sitemap.xml

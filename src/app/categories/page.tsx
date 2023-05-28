@@ -9,6 +9,16 @@ export const revalidate = 60;
 export const metadata = {
   title: `Categories | ${config.title}`,
   description: config.description,
+  openGraph: {
+    type: "website",
+    title: `Categories | ${config.title}`,
+    description: config.description,
+    siteName: config.title,
+  },
+  twitter: {
+    title: `Categories | ${config.title}`,
+    description: config.description,
+  },
 };
 
 export default async function Page() {

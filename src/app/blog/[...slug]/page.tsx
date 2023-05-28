@@ -1,12 +1,37 @@
 import { CreatedAt } from "@/components/created-at";
 import { Header } from "@/components/header";
 import { RelatedPost } from "@/components/related-post";
+import config from "@/lib/config";
 import { getImageUrl, removeDuplicates } from "@/lib/utils";
 import { getPostBySlug } from "@/src/queries/getPostBySlug";
 import { PortableText } from "@portabletext/react";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const revalidate = 360;
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const slug = params.slug[0];
+  const postData = await getPostBySlug(slug);
+
+  return {
+    title: postData.post.title,
+    description: postData.post.description,
+    keywords: postData.post.keywords,
+    openGraph: {
+      type: "website",
+      title: postData.post.title,
+      description: postData.post.description,
+      siteName: config.title,
+      images: postData.post.coverImage,
+    },
+    twitter: {
+      title: postData.post.title,
+      description: postData.post.description,
+      images: postData.post.coverImage,
+    },
+  };
+}
 
 export default async function Page({ params }) {
   const slug = params.slug[0];

@@ -12,7 +12,7 @@ export default async function Page() {
       <Header location="home" />
       <main>
         <div className="flex flex-col gap-8">
-          <ul>
+          <ul className="flex flex-col gap-4">
             {posts.map((post, index) => (
               <PostCard key={post.slug} index={index} post={post} />
             ))}
