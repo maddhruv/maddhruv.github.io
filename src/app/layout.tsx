@@ -1,5 +1,6 @@
 import config from "@/lib/config";
 import { Fira_Code } from "next/font/google";
+import Script from "next/script";
 
 import "./global.css";
 import { Metadata } from "next";
@@ -43,6 +44,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-M2KT43XFWM`}
+      />
+
+      <Script strategy="lazyOnload" id="ga">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M2KT43XFWM', {
+        page_path: window.location.pathname,
+        });
+    `}
+      </Script>
       <body className={`${firaCode.className} p-2`}>
         {children}
         <Footer />
