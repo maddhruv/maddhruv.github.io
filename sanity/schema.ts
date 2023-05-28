@@ -52,6 +52,9 @@ const PostSchema: SchemaTypeDefinition = {
           title: "Code Block",
           type: "code",
         },
+        {
+          type: "image",
+        },
       ],
       validation: (Rule) => Rule.required(),
     },

@@ -4,6 +4,7 @@ import { Header } from "@/components/header";
 import { RelatedPost } from "@/components/related-post";
 import config from "@/lib/config";
 import { getImageUrl, removeDuplicates } from "@/lib/utils";
+import { urlForImage } from "@/sanity/lib/image";
 import { getPostBySlug } from "@/src/queries/getPostBySlug";
 import { PortableText } from "@portabletext/react";
 import { Metadata } from "next";
@@ -78,6 +79,15 @@ export default async function Page({ params }) {
               types: {
                 code: (props) => {
                   return <Code {...props} />;
+                },
+                image: (props) => {
+                  console.log(props);
+                  return (
+                    <img
+                      src={urlForImage(props.value).url()}
+                      className="lg:max-w-screen-md my-2 mx-auto"
+                    />
+                  );
                 },
               },
             }}
