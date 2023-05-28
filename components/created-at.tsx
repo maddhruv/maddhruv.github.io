@@ -1,6 +1,6 @@
 export const CreatedAt = ({ date }) => {
   return (
-    <div className="📆">
+    <div className="text-gray-400">
       {new Date(date).toLocaleDateString("en-US", {
         month: "long",
         day: "numeric",

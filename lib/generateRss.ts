@@ -1,9 +1,11 @@
 import fs from "fs";
 import RSS from "rss";
 import config from "./config";
-import { getPageTitle } from "./utils";
+import { getHomePagePosts } from "@/src/queries/getHomePagePosts";
 
-export const generateRss = (pages) => {
+export const generateRss = async () => {
+  const posts = await getHomePagePosts();
+
   const feedOptions: RSS.FeedOptions = {
     title: config.title,
     description: config.description,
@@ -14,14 +16,15 @@ export const generateRss = (pages) => {
 
   const feed = new RSS(feedOptions);
 
-  pages.forEach((page) => {
+  posts.forEach((page) => {
+    console.log(page);
     feed.item({
       title: page.title,
       description: page.description,
-      url: `/blog/${getPageTitle(
-        page.title
-      )}?utm_source=rss&utm_medium=rss&utm_campaign=rss`,
-      date: page.date,
+      url: `/blog/
+        ${page.slug}
+      }?utm_source=rss&utm_medium=rss&utm_campaign=rss`,
+      date: page._createdAt,
     });
   });
 

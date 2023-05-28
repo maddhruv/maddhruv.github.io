@@ -1,16 +1,7 @@
 import MonacoEditor from "@monaco-editor/react";
 import { useState } from "react";
-import dynamic from "next/dynamic";
 
 const DEFAULT_LANGUAGE = "typescript";
-
-const DefaultEditor = dynamic(() =>
-  import("react-notion-x/build/third-party/code").then(async (m) => {
-    // additional prism syntaxes
-    await Promise.all([import("prismjs/components/prism-yaml.js")]);
-    return m.Code;
-  })
-);
 
 export const Code = (props) => {
   const { block } = props;
@@ -27,11 +18,6 @@ export const Code = (props) => {
 
   function handleEditorDidMount(editor) {
     setEditorHeight(Math.min(1000, editor.getContentHeight()) + 15);
-  }
-
-  if (!isLiveEditor) {
-    delete block.properties?.caption;
-    return <DefaultEditor {...props} />;
   }
 
   return (
