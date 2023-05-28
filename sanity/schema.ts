@@ -45,7 +45,14 @@ const PostSchema: SchemaTypeDefinition = {
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          name: "code",
+          title: "Code Block",
+          type: "code",
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
     {

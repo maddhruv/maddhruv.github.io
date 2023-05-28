@@ -1,35 +1,12 @@
-import MonacoEditor from "@monaco-editor/react";
-import { useState } from "react";
-
-const DEFAULT_LANGUAGE = "typescript";
+import { Code as SyntaxHighlighter } from "bright";
 
 export const Code = (props) => {
-  const { block } = props;
-  const [editorHeight, setEditorHeight] = useState(100);
+  const { value } = props;
 
-  const language = (
-    block.properties?.language?.[0]?.[0] || DEFAULT_LANGUAGE
-  ).toLowerCase();
+  const language = value?.language?.toLowerCase() || "javascript";
 
-  const isLiveEditor =
-    block.properties?.caption?.[0]?.[0]?.includes("live") || false;
+  const code = value?.code || "javascript";
 
-  const content = block.properties?.title?.[0]?.[0] || "";
-
-  function handleEditorDidMount(editor) {
-    setEditorHeight(Math.min(1000, editor.getContentHeight()) + 15);
-  }
-
-  return (
-    <MonacoEditor
-      height={`${editorHeight}px`}
-      language={language}
-      value={content}
-      theme="vs-dark"
-      onMount={handleEditorDidMount}
-      options={{
-        minimap: { enabled: false },
-      }}
-    />
-  );
+  // @ts-expect-error
+  return <SyntaxHighlighter lang={language}>{code}</SyntaxHighlighter>;
 };

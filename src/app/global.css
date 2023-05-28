@@ -23,5 +23,5 @@ main {
 }
 
 #content code {
-  @apply bg-gray-900 text-purple-400 px-1;
+  @apply bg-gray-900 text-red px-1;
 }

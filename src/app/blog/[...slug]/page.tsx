@@ -1,3 +1,4 @@
+import { Code } from "@/components/code";
 import { CreatedAt } from "@/components/created-at";
 import { Header } from "@/components/header";
 import { RelatedPost } from "@/components/related-post";
@@ -24,11 +25,13 @@ export async function generateMetadata({ params }): Promise<Metadata> {
       description: postData.post.description,
       siteName: config.title,
       images: postData.post.coverImage,
+      url: `${config.appLink}/blog/${postData.post.slug}`,
     },
     twitter: {
       title: postData.post.title,
       description: postData.post.description,
       images: postData.post.coverImage,
+      card: "summary_large_image",
     },
   };
 }
@@ -69,7 +72,16 @@ export default async function Page({ params }) {
           id="content"
           className="text-xl pb-6 border-b border-b-gray-500"
         >
-          <PortableText value={post.content} />
+          <PortableText
+            value={post.content}
+            components={{
+              types: {
+                code: (props) => {
+                  return <Code {...props} />;
+                },
+              },
+            }}
+          />
         </section>
 
         <section id="related-posts" className="my-6">
