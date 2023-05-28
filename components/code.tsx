@@ -1,5 +1,9 @@
 import { Code as SyntaxHighlighter } from "bright";
 
+import dracula from "./dracula.json";
+
+SyntaxHighlighter.theme = dracula;
+
 export const Code = (props) => {
   const { value } = props;
 

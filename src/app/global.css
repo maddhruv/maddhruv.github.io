@@ -26,6 +26,10 @@ main {
   @apply bg-gray-900 text-red px-1;
 }
 
+#content pre > code {
+  @apply bg-transparent;
+}
+
 #content ul {
   @apply list-none list-inside;
 }
