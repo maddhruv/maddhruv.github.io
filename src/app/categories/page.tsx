@@ -4,7 +4,7 @@ import { getCategories } from "@/src/queries/getCategories";
 import config from "@/lib/config";
 import { Category } from "@/components/category";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 export const metadata = {
   title: `Categories | ${config.title}`,

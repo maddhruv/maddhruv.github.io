@@ -11,7 +11,7 @@ import { PortableText } from "@portabletext/react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export const revalidate = 360;
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }): Promise<Metadata> {
   const slug = params.slug[0];
