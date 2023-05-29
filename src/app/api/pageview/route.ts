@@ -1,12 +1,16 @@
 import { NextResponse } from "next/server";
 import { client } from "@/sanity/lib/client";
+import config from "@/lib/config";
 
 export async function GET(request: Request) {
   try {
     const { searchParams, host } = new URL(request.url);
     const postId = searchParams.get("postId");
 
-    console.log({ host });
+    if (host !== config.host) {
+      console.error("Invalid host", host);
+      return NextResponse.json({ error: "Invalid host" }, { status: 403 });
+    }
 
     if (!postId) return NextResponse.json({ error: "PostId is missing" });
     if (process.env.NODE_ENV === "development")

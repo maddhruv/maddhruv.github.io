@@ -27,7 +27,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
       description: postData.post.description,
       siteName: config.title,
       images: postData.post.coverImage,
-      url: `${config.appLink}/blog/${postData.post.slug}`,
+      url: `${config.host}/blog/${postData.post.slug}`,
     },
     twitter: {
       title: postData.post.title,

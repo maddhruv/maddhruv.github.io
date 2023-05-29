@@ -10,7 +10,7 @@ export const generateRss = async () => {
     title: config.title,
     description: config.description,
     site_url: config.host,
-    feed_url: `${config.host}/rss.xml`,
+    feed_url: `https://${config.host}/rss.xml`,
     pubDate: new Date(),
   };
 

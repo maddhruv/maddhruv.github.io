@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   publisher: config.title,
   openGraph: {
     type: "website",
-    url: config.appLink,
+    url: config.host,
     title: config.siteTitle,
     description: config.description,
     siteName: config.siteTitle,

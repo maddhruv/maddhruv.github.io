@@ -84,7 +84,7 @@ const PostSchema: SchemaTypeDefinition = {
       name: "pageView",
       title: "Page View",
       type: "number",
-      // hidden: true,
+      hidden: true,
     },
     {
       name: "isPublished",

@@ -1,7 +1,6 @@
-const websiteUrl = "https://maddhruv.dev";
+const websiteUrl = "www.maddhruv.dev"; // to be used as host filtering in pageView API
 
 const config = {
-  appLink: websiteUrl,
   host:
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"

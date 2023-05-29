@@ -14,23 +14,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const categories = await getCategories();
 
   const postsMap = posts.map((post) => ({
-    url: `${config.appLink}/blog/${post.slug}`,
+    url: `https://${config.host}/blog/${post.slug}`,
     lastModified: new Date(post._updatedAt),
   }));
 
   const categoriesMap = categories.map((category) => ({
-    url: `${config.appLink}/category/${encodeURIComponent(
+    url: `https://${config.host}/category/${encodeURIComponent(
       category.name.toLocaleLowerCase()
     )}`,
   }));
 
   const staticPages = STATIC_PAGES.map((page) => ({
-    url: `${config.appLink}/${page}`,
+    url: `https://${config.host}/${page}`,
   }));
 
   return [
     {
-      url: `${config.appLink}/`,
+      url: `https://${config.host}/`,
     },
     ...staticPages,
     ...postsMap,
