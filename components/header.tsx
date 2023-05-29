@@ -79,6 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ location }) => {
                 <Link
                   className="py-2 flex items-center gap-2 pr-4 pl-3 text-primary-600 hover:text-primary-400 rounded lg:bg-transparent lg:p-0"
                   href="/rss.xml"
+                  prefetch={false}
                 >
                   RSS
                 </Link>
