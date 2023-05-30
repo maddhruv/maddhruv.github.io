@@ -7,7 +7,7 @@ export async function GET(request: Request) {
     const { searchParams, host } = new URL(request.url);
     const postId = searchParams.get("postId");
 
-    if (host !== config.host) {
+    if (host !== config.host && host !== "localhost:3000") {
       console.error("Invalid host", host);
       return NextResponse.json({ error: "Invalid host" }, { status: 403 });
     }

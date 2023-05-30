@@ -66,6 +66,11 @@ export const Footer = () => {
                     Source Code
                   </Link>
                 </li>
+                <li className="mb-4">
+                  <Link className="hover:underline" href="/about-me">
+                    About Me
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
