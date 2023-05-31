@@ -22,7 +22,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const categories = await getCategories();
+  const categories = (await getCategories()).filter((c) => c.count);
 
   return (
     <>
