@@ -1,6 +1,15 @@
 import Link from "next/link";
 
-export const RelatedPost = ({ post }) => {
+interface RelatedPostProps {
+  post: {
+    slug: string;
+    coverImage: string;
+    title: string;
+    description: string;
+  };
+}
+
+export const RelatedPost: React.FC<RelatedPostProps> = ({ post }) => {
   return (
     <div className="">
       <Link href={`/blog/${post.slug}`}>

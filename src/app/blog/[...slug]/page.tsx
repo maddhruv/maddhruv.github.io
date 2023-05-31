@@ -49,12 +49,12 @@ export default async function Page({ params }) {
 
   const { post, morePosts } = postData;
 
-  const relatedPosts = removeDuplicates(
-    [...post.related, ...morePosts]
-      .slice(0, 3)
-      .filter((p) => p.slug !== post.slug),
-    "slug"
-  ) as any;
+  const relatedPosts = (
+    removeDuplicates(
+      [...post.related, ...morePosts].filter((p) => p.slug !== post.slug),
+      "slug"
+    ) as any
+  ).slice(0, 3);
 
   return (
     <>
