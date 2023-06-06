@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     title: config.siteTitle,
     description: config.description,
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 const firaCode = Fira_Code({

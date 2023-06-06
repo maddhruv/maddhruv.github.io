@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ location }) => {
       <nav className="bg-transparent px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl border-b pb-2 lg:pb-8">
           <Link href="/" className="flex items-center">
-            <span className="text-green text-2xl pr-1">*</span>
+            <span className="text-green text-2xl">:</span>
             <HeadingComponent
               className={`self-center text-3xl font-semibold whitespace-nowrap text-blue hover:text-blue-600`}
             >
