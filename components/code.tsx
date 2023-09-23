@@ -11,6 +11,5 @@ export const Code = (props) => {
 
   const code = value?.code || "javascript";
 
-  // @ts-expect-error
   return <SyntaxHighlighter lang={language}>{code}</SyntaxHighlighter>;
 };
