@@ -9,6 +9,16 @@
         }
       ],
       "destination": "/app/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "dm.maddhruv.dev"
+        }
+      ],
+      "destination": "/app/:path*"
     }
   ]
 }
