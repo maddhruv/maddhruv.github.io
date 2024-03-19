@@ -31,7 +31,7 @@ main {
 }
 
 #content ul {
-  @apply list-none list-inside;
+  @apply list-disc list-inside;
 }
 
 #content > ol {

@@ -1,5 +1,32 @@
 import { type SchemaTypeDefinition } from "sanity";
 
+const contentBlock = {
+  name: "content",
+  title: "Content",
+  type: "array",
+  of: [
+    { type: "block" },
+    {
+      name: "code",
+      title: "Code Block",
+      type: "code",
+    },
+    {
+      type: "image",
+      name: "image",
+      title: "Image",
+      fields: [
+        {
+          name: "caption",
+          title: "Caption",
+          type: "string",
+        },
+      ],
+    },
+  ],
+  validation: (Rule) => Rule.required(),
+};
+
 const CategorySchema: SchemaTypeDefinition = {
   name: "category",
   title: "Category",
@@ -41,23 +68,7 @@ const PostSchema: SchemaTypeDefinition = {
       },
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: "content",
-      title: "Content",
-      type: "array",
-      of: [
-        { type: "block" },
-        {
-          name: "code",
-          title: "Code Block",
-          type: "code",
-        },
-        {
-          type: "image",
-        },
-      ],
-      validation: (Rule) => Rule.required(),
-    },
+    contentBlock,
     {
       name: "keywords",
       title: "Keywords",
@@ -103,6 +114,40 @@ const PostSchema: SchemaTypeDefinition = {
   },
 };
 
+const PageSchema: SchemaTypeDefinition = {
+  name: "page",
+  title: "Page",
+  type: "document",
+  fields: [
+    {
+      name: "pageId",
+      title: "Page ID",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "description",
+      title: "Description",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    },
+    contentBlock,
+    {
+      name: "categories",
+      title: "Categories to refer",
+      type: "array",
+      of: [{ type: "reference", to: { type: "category" } }],
+      validation: (Rule) => Rule.required(),
+    },
+  ],
+};
+
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [CategorySchema, PostSchema],
+  types: [CategorySchema, PostSchema, PageSchema],
 };

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRef } from "react";
 
 interface HeaderProps {
-  location: "home" | "post";
+  location: "home" | "post" | "page";
 }
 
 export const Header: React.FC<HeaderProps> = ({ location }) => {
@@ -67,6 +67,14 @@ export const Header: React.FC<HeaderProps> = ({ location }) => {
             ref={ref}
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 border-t lg:border-none">
+              <li>
+                <Link
+                  className="py-2 flex items-center gap-2 pr-4 pl-3 text-primary-600 hover:text-primary-400 rounded lg:bg-transparent lg:p-0"
+                  href="/maintaining-javascript"
+                >
+                  Maintaining JavaScript
+                </Link>
+              </li>
               <li>
                 <Link
                   className="py-2 flex items-center gap-2 pr-4 pl-3 text-primary-600 hover:text-primary-400 rounded lg:bg-transparent lg:p-0"

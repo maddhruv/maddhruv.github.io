@@ -1,11 +1,10 @@
-import { Code } from "@/components/code";
 import { CreatedAt } from "@/components/created-at";
 import { Header } from "@/components/header";
 import { PageView } from "@/components/pageview";
 import { RelatedPost } from "@/components/related-post";
+import { components } from "@/lib/components";
 import config from "@/lib/config";
 import { getImageUrl, removeDuplicates } from "@/lib/utils";
-import { urlForImage } from "@/sanity/lib/image";
 import { getPostBySlug } from "@/src/queries/getPostBySlug";
 import { PortableText } from "@portabletext/react";
 import { Metadata } from "next";
@@ -75,25 +74,7 @@ export default async function Page({ params }) {
           id="content"
           className="text-xl pb-6 border-b border-b-gray-500"
         >
-          <PortableText
-            value={post.content}
-            components={{
-              types: {
-                code: (props) => {
-                  return <Code {...props} />;
-                },
-                image: (props) => {
-                  return (
-                    <img
-                      src={urlForImage(props.value).url()}
-                      className="lg:max-w-screen-md my-2 mx-auto"
-                      alt={post.title}
-                    />
-                  );
-                },
-              },
-            }}
-          />
+          <PortableText value={post.content} components={components} />
         </section>
 
         <section id="related-posts" className="my-6">
