@@ -6,7 +6,7 @@ import { generateRss } from "@/lib/generateRss";
 
 export const revalidate = 360;
 
-const STATIC_PAGES = ["about-me", "categories"];
+const STATIC_PAGES = ["about-me", "categories", "maintaining-javascript"];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   generateRss();
