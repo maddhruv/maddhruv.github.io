@@ -42,3 +42,7 @@ main {
   list-style-type: lower-alpha;
   @apply list-inside ml-4;
 }
+
+#content p {
+  @apply mt-2 tracking-wider;
+}
