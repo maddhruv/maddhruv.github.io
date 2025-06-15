@@ -31,7 +31,9 @@ export const PostCard = ({ post, index }) => {
           </p>
           <div className="flex gap-2 mt-2">
             {post.categories &&
-              post.categories.map((category) => <Category name={category} />)}
+              post.categories.map((category) => (
+                <Category name={category} key={category} />
+              ))}
           </div>
         </div>
       </section>

@@ -81,7 +81,7 @@ export default async function Page({ params }) {
           <h2 className="text-3xl font-medium text-red">Related Posts</h2>
           <div className="grid grid-rows lg:grid-cols-3 gap-4">
             {relatedPosts.map((post) => (
-              <RelatedPost post={post} />
+              <RelatedPost post={post} key={post.slug} />
             ))}
           </div>
         </section>
