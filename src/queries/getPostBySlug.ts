@@ -5,7 +5,6 @@ const postFields = `
   _id,
   title,
   description,
-  "coverImage": coverImage.asset->url,
   keywords,
   "slug": slug.current,
   "categories": categories[]->name,
@@ -18,7 +17,6 @@ const relatedPostsFields = `
   title,
   description,
   "slug": slug.current,
-  "coverImage": coverImage.asset->url,
 `;
 
 export const query = groq`

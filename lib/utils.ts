@@ -13,20 +13,6 @@ export const removeDuplicates = <T>(array, property): T => {
   });
 };
 
-type ImageLocation = "homepage" | "post" | "related";
-export const getImageUrl = (image: string, location: ImageLocation): string => {
-  if (location === "homepage") {
-    return `${image}?h=300&w=600&auto=format`;
-  }
-  if (location === "post") {
-    return `${image}?h=580&w=1000&auto=format`;
-  }
-  if (location === "related") {
-    return `${image}?h=75&w=131&auto=format`;
-  }
-  return image;
-};
-
 export const formatNumber = (number: number): string => {
   return new Intl.NumberFormat("en-US").format(number);
 };

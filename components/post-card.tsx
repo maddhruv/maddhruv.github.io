@@ -1,25 +1,10 @@
-import { getImageUrl } from "@/lib/utils";
 import Link from "next/link";
 import { Category } from "./category";
 
 export const PostCard = ({ post, index }) => {
   return (
     <li>
-      <section className="flex flex-col lg:flex-row gap-4">
-        <div>
-          <Link href={`/blog/${post.slug}`}>
-            <img
-              src={getImageUrl(post.coverImage, "homepage")}
-              alt={`${post.title} - cover`}
-              loading={index < 3 ? "eager" : "lazy"}
-              width="400px"
-              style={{
-                minHeight: "210px",
-              }}
-              className="object-cover"
-            />
-          </Link>
-        </div>
+      <section className="flex flex-col gap-4">
         <div className="flex-1">
           <Link href={`/blog/${post.slug}`}>
             <h2 className="text-2xl text-purple hover:text-purple-600 font-medium">

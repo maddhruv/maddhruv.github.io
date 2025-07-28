@@ -13,7 +13,6 @@ const postsFields = `
   title,
   description,
   "slug": slug.current,
-  "coverImage": coverImage.asset->url,
 `;
 
 export const query = groq`

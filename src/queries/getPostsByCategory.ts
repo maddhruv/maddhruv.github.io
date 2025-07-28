@@ -6,7 +6,6 @@ export const query = groq`
 *[_type == "post" && !(_id in path('drafts.**')) && isPublished == true && (categories[]->name match $category)]{
   title,
   description,
-  "coverImage": coverImage.asset->url,
   "categories": categories[]->name,
   "slug": slug.current,
   pageView,

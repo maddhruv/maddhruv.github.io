@@ -4,7 +4,7 @@ import { PageView } from "@/components/pageview";
 import { RelatedPost } from "@/components/related-post";
 import { components } from "@/lib/components";
 import config from "@/lib/config";
-import { getImageUrl, removeDuplicates } from "@/lib/utils";
+import { removeDuplicates } from "@/lib/utils";
 import { getPostBySlug } from "@/src/queries/getPostBySlug";
 import { PortableText } from "@portabletext/react";
 import { Metadata } from "next";
@@ -25,14 +25,12 @@ export async function generateMetadata({ params }): Promise<Metadata> {
       title: postData.post.title,
       description: postData.post.description,
       siteName: config.title,
-      images: postData.post.coverImage,
       url: `${config.host}/blog/${postData.post.slug}`,
     },
     twitter: {
       title: postData.post.title,
       description: postData.post.description,
-      images: postData.post.coverImage,
-      card: "summary_large_image",
+      card: "summary",
     },
   };
 }
@@ -63,12 +61,6 @@ export default async function Page({ params }) {
         <h1 className="text-4xl text-purple font-medium">{post.title}</h1>
         <CreatedAt date={post._createdAt} />
         <p>{post.description}</p>
-
-        <img
-          src={getImageUrl(post.coverImage, "post")}
-          alt={`${post.title} - cover`}
-          className="mx-auto mt-4"
-        />
 
         <section
           id="content"

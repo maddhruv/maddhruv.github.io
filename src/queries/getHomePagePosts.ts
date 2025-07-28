@@ -7,7 +7,6 @@ export const query = groq`
   _id,
   title,
   description,
-  "coverImage": coverImage.asset->url,
   keywords,
   "slug": slug.current,
   "categories": categories[]->name,

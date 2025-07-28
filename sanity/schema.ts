@@ -83,15 +83,6 @@ const PostSchema: SchemaTypeDefinition = {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "coverImage",
-      title: "Cover Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      validation: (Rule) => Rule.required(),
-    },
-    {
       name: "pageView",
       title: "Page View",
       type: "number",
